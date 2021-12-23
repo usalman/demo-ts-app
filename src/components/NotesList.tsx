@@ -1,11 +1,16 @@
-import React from 'react'
+import * as React from "react";
+import { Note } from "../models/NoteModel";
 
-const NotesList = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+interface INotesListProps {
+  notes: Note[];
 }
 
-export default NotesList
+const NotesList: React.FC<INotesListProps> = ({ notes }) => {
+  return (
+    <>
+      <h2 className="mt-3">Notes</h2>
+    </>
+  );
+};
+
+export default NotesList;
