@@ -9,7 +9,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
     <Navbar fixed='top' bg='dark' variant='dark'>
       <Container>
         <Navbar.Brand>
-          foo bar
+          Header
         </Navbar.Brand>
       </Container>
     </Navbar>
