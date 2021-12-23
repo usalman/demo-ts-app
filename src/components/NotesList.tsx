@@ -8,7 +8,7 @@ interface INotesListProps {
 
 const NotesList: React.FC<INotesListProps> = ({ notes }) => {
   const renderNotes = () => {
-    notes.map((note) => <Notes note={note}/>);
+    return notes.map((note) => <Notes key={note.id} note={note} />);
   };
   return (
     <>
