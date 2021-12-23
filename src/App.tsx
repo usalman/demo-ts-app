@@ -1,24 +1,22 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import { Note } from "./models/NoteModel";
 
 function App() {
-  const [notes, setNotes] = useState<{
-    id: string,
-    title: string,
-    text: string,
-    color: string,
-    date: string,
-  }[]>([{
-    id: (new Date).toString(),
-    title: 'meetings',
-    text: 'schedule meeting',
-    color: '#dfdfdf',
-    date: (new Date).toString()
-  }])
+  const [notes, setNotes] = useState<Note[]>([
+    {
+      id: new Date().toString(),
+      title: "meetings",
+      text: "schedule meeting",
+      color: "#dfdfdf",
+      date: new Date().toString(),
+    },
+  ]);
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
